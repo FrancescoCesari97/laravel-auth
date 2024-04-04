@@ -11,6 +11,11 @@ class Project extends Model
 
     protected $fillable = ['title', 'content'];
 
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
     // come prendere i primi 15 caratteri del content
     public function getAbstract($n_chars = 30)
     {
