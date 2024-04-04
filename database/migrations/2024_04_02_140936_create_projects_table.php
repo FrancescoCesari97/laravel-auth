@@ -14,6 +14,7 @@ return new class extends Migration {
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('type_id')->constrained();
             $table->string('title', 150);
             $table->string('slug', 150);
             $table->text('content');
