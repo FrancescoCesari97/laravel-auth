@@ -6,7 +6,7 @@
     <div class="container">
 
         <button class=" btn btn-primary my-4">
-            <a class="text-light" href="{{ 'admin.projects.create' }}"><i class="fa-solid fa-plus"></i> crea nuovo project</a>
+            <a class="text-light" href="{{ 'projects.create' }}"><i class="fa-solid fa-plus"></i> crea nuovo project</a>
 
 
         </button>
