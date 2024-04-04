@@ -9,7 +9,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'slug', 'content'];
+    protected $fillable = ['title', 'content'];
 
     // come prendere i primi 15 caratteri del content
     public function getAbstract($n_chars = 30)

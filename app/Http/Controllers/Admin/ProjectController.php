@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Str;
+
 class ProjectController extends Controller
 {
     /**
@@ -43,6 +45,8 @@ class ProjectController extends Controller
         $project = new Project();
 
         $project->fill($data);
+
+        $project->slug = Str::slug($project->title);
 
         $project->save();
 
