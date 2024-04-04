@@ -27,7 +27,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        return view('admin.projects.create');
     }
 
     /**
@@ -39,6 +39,8 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        $project = new Project();
 
         $project->fill($data);
 
@@ -95,6 +97,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('admin.projects.index') /* ->with('message-class', 'alert-danger ')->with('message', 'progetto eliminato ') */;
     }
 }
